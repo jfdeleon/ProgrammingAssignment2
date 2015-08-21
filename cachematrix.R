@@ -5,8 +5,10 @@
 #> This program computes and stores the inverse of a matrix for use in future computations.
 #> It contains 2 main functions makeCacheMatrix() and CacheSolve().
 
-#> makeCacheMatrix() - creates a matrix that would contain the original matrix and an equally dimensioned matrix that would contain the inverse of the original matrix.
-#> cacheSolve() - solves the original matrix created in the makeCacheMatrix function. if the original matrix is the same as the previous matrix submitted (ie. the same one previously solved) the cached solution to the matrix is returned.
+#> makeCacheMatrix() - creates a matrix that would contain the original matrix and an equally dimensioned matrix that would 
+#> contain the inverse of the original matrix.
+#> cacheSolve() - solves the original matrix created in the makeCacheMatrix function. if the original matrix is the same as 
+#> the previous matrix submitted (ie. the same one previously solved) the cached solution to the matrix is returned.
 
 #> How to use:
 #> 1. makeCacheMatrix(x)
@@ -33,7 +35,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-#> cacheSolve() - solves the original matrix (x) and stores the solution in the solution matrix (m). if the original matrix (x) contains a matrix previously solved then this function returns the value of (m). 
+#> cacheSolve() - solves the original matrix (x) and stores the solution in the solution matrix (m). if the original 
+#> matrix (x) contains a matrix previously solved then this function returns the value of (m). 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
