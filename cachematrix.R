@@ -18,7 +18,7 @@
 #> makeCacheMatrix() - creates two (2) matrices that would contain the original matrix (x) and the inverted matrix (m).
 
 makeCacheMatrix <- function(x = matrix()) {
-		m <- NULL
+	m <- NULL
         set <- function(y) {
                 x <<- y
                 m <<- NULL
@@ -27,8 +27,8 @@ makeCacheMatrix <- function(x = matrix()) {
         setsolve <- function(solve) m <<- solve
         getsolve <- function() m
         list(set = set, get = get,
-             setsolve = setsolve,
-             getsolve = getsolve)
+        	setsolve = setsolve,
+        	getsolve = getsolve)
 
 }
 
@@ -37,7 +37,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-		m <- x$getsolve()
+	m <- x$getsolve()
         if(!is.null(m)) {
                 message("getting cached data")
                 return(m)
@@ -46,6 +46,5 @@ cacheSolve <- function(x, ...) {
         m <- solve(data, ...)
         x$setsolve(m)
         m
-
 }
  #> Nothing Follows
